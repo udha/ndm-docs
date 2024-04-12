@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: N3 Technical Documentation
+site_url: https://docs.home.ndm.id.au
+site_description: N3 Technical Documentation - Network Nick's Notes
+
+# Repository
+repo_name: udha/ndm-docs
+repo_url: https://github.com/udha/ndm-docs
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2024 Nick Meredith
+# Configuration
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+  - blog
+# - social
+  - social:
+      enabled: !ENV [CI, false]
+      cards_layout: default
+# - minify:
+#   minify_html: true
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/udha/
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/MrNickMeredith
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/nicholas.meredith
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nicholasmeredith/
+
+# Extensions
+markdown_extensions:
+  - abbr
+
